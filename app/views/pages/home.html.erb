@@ -14,9 +14,13 @@
     <%= link_to "Sign up", new_user_registration_path %>
 <% end %>
 
-<p>You can test the API with the following credentials</p>
 
+<p>You can test the API with the following credentials</p>
 <div class="container">
+    <!-- Application Info - Displayed as Json -->
+    <%= @application.as_json %>
+
+    <!-- List of Links -->
     <ul>
         <li><%= link_to "Sentence Transformations", sentence_transformations_path %></li>
         <li>Api V1 Sentence Transformations</li>
