@@ -1,0 +1,2 @@
+class SentenceTransformation < ApplicationRecord
+end

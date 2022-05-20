@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Sentence transformations</h1>
+
+<div id="sentence_transformations">
+  <% @sentence_transformations.each do |sentence_transformation| %>
+    <%= render sentence_transformation %>
+    <p>
+      <%= link_to "Show this sentence transformation", sentence_transformation %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New sentence transformation", new_sentence_transformation_path %>

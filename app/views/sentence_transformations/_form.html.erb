@@ -1,0 +1,37 @@
+<%= form_with(model: sentence_transformation) do |form| %>
+  <% if sentence_transformation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(sentence_transformation.errors.count, "error") %> prohibited this sentence_transformation from being saved:</h2>
+
+      <ul>
+        <% sentence_transformation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :original, style: "display: block" %>
+    <%= form.text_field :original %>
+  </div>
+
+  <div>
+    <%= form.label :keyword, style: "display: block" %>
+    <%= form.text_field :keyword %>
+  </div>
+
+  <div>
+    <%= form.label :partial, style: "display: block" %>
+    <%= form.text_field :partial %>
+  </div>
+
+  <div>
+    <%= form.label :answer, style: "display: block" %>
+    <%= form.text_field :answer %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
