@@ -1,4 +1,4 @@
-class Api::V1::SentenceTransformationsController < ApplicationController
+class Api::V1::SentenceTransformationsController < ApiController
     before_action :set_sentence_transformation, only: %i[ show edit update destroy ]
 
     # GET /sentence_transformations or /sentence_transformations.json
